@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BR Architects</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- 최상단 네비게이션 메뉴 -->
+    <nav class="nav">
+        <div class="nav__top">
+            <a href="#"><span><b>BR</b></span><span> Architects</span></a>
+
+            <div class="nav__top__inner-links">
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+안녕하세요~!!!
+    <!-- Header -->
+    <header class="header" id="header">
+
+        <img src="./img/architect.jpg" alt="architect">
+
+        <div class="header__title">
+            <h1><span><b>BR</b></span><span> Architects</span></h1>
+        </div>
+    </header>
+
+    <!-- 전체 글 article -->
+    <article class="main-contents">
+        <!-- Projects -->
+        <section class="projects" id="projects">
+            <div class="section__title">
+                <h3>Projects</h3>
+            </div>
+
+            <div class="projects__list">
+                <img src="./img/house5.jpg" alt="Summer House">
+                <span>Summer House</span>
+            </div>
+
+            <div class="projects__list">
+                <img src="./img/house2.jpg" alt="Brick House">
+                <span>Brick House</span>
+            </div>
+
+            <div class="projects__list">
+                <img src="./img/house3.jpg" alt="Renovated">
+                <span>Renovated</span>
+            </div>
+
+            <div class="projects__list">
+                <img src="./img/house4.jpg" alt="Barn House">
+                <span>Barn House</span>
+            </div>
+
+            <div class="projects__list">
+                <img src="./img/house2.jpg" alt="Summer House">
+                <span>Summer House</span>
+            </div>
+
+            <div class="projects__list">
+                <img src="./img/house3.jpg" alt="Brick House">
+                <span>Brick House</span>
+            </div>
+
+            <div class="projects__list">
+                <img src="./img/house4.jpg" alt="Renovated">
+                <span>Renovated</span>
+            </div>
+
+            <div class="projects__list">
+                <img src="./img/house5.jpg" alt="Barn House">
+                <span>Barn House</span>
+            </div>
+            
+        </section>
+
+        <!-- About -->
+        <section class="about" id="about">
+            <div class="section__title">
+                <h3>About</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+
+            <div class="about__list">
+                <div class="about__list__item">
+                    <img src="./img/team2.jpg" alt="team2">
+                    <h3>John Doe</h3>
+                    <p>CEO & Founder</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <p><button>Contact</button></p>
+                </div>
+
+                <div class="about__list__item">
+                    <img src="./img/team1.jpg" alt="team1">
+                    <h3>Jane Doe</h3>
+                    <p>Architect</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <p><button>Contact</button></p>
+                </div>
+
+                <div class="about__list__item">
+                    <img src="./img/team3.jpg" alt="team3">
+                    <h3>Mike Ross</h3>
+                    <p>Architect</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <p><button>Contact</button></p>
+                </div>
+
+                <div class="about__list__item">
+                    <img src="./img/team4.jpg" alt="team4">
+                    <h3>Dan Star</h3>
+                    <p>Architect</p>
+                    <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+                    <p><button>Contact</button></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact" id="contact">
+            <div class="section__title">
+                <h3>Contact</h3>
+                <p>Lets get touch and talk about your next project.</p>
+
+                <form action="#" id="contact__form" class="contact__form">
+                    <p><input type="text" placeholder="Name"></p> 
+                    <p><input type="text" placeholder="Email"></p>
+                    <p><input type="text" placeholder="Subject"></p>
+                    <p><input type="text" placeholder="Comment"></p>
+                    <p><button type="submit" id="contact__submit" class="contact__submit">SEND MESSAGE</button></p>
+                </form>
+            </div>
+        </section>
+
+        <div class="map">
+            <img src="./img/map.jpg" alt="map">
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
+    </footer>
+
+    <script type="module">
+        import RegexHelper from './js/helper/RegexHelper.js';
+
+        const name = document.querySelector('input[placeholder="Name"]');
+        const email = document.querySelector('input[placeholder="Email"]');
+
+        document.querySelector('#contact__submit').addEventListener('click', e => {
+            e.preventDefault();
+
+            const regexHelper = RegexHelper.getInstance();
+
+            try {
+                regexHelper.value(name, "Please input your name.");
+                regexHelper.engKor(name, "Please check your name is correct format(can only use English or Korean");
+                regexHelper.minLength(name, 2, "The name is too short(needs more than two letters).");
+
+                regexHelper.value(email, "Please input your E-mail.");
+                regexHelper.email(email, "Please check E-mail address is correct format.");
+            } catch(err) {    
+                alert(err.message);
+                console.error(err);
+                err.selector.focus();
+                return;
+            }
+        });
+    </script>
+
+    <!-- focus out 시키기 실패 -->
+    <!-- <script type="module">
+        document.querySelectorAll('.link__target').addEventListener('focus', e => {
+            e.currentTarget.blur();
+        });
+    </script> -->
+
+    <script type="module">
+        import exploreDom from './js/Dom.js';
+
+        const body = document.querySelector('body');
+        console.log(exploreDom(body));
+    </script>
+
+    <!--— 공지사항 알림 —-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.min.js"></script>
+    <script src="./js/notice.js"></script>
+    <script>
+        // Notice.init('본인이름', 'pdf파일경로');
+        Notice.init('서보선', '22.09.21-서보선.pdf');
+    </script>
+</body>
+</html>

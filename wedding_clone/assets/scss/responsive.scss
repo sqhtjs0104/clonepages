@@ -1,0 +1,15 @@
+/** Desktop-first written */
+$bp-t: 1024px;
+$bp-m: 768px;
+
+@mixin tablet {
+    @media screen and (max-width: #{$bp-t - 1px}) and (min-width: #{$bp-m}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: #{$bp-m - 1px}) {
+        @content;
+    }
+}

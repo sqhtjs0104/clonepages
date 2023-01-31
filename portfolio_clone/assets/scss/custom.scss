@@ -1,0 +1,29 @@
+@mixin multiLineEllipsis($lineHeight, $lineNumber) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lineNumber;
+    line-height: $lineHeight;
+    height: calc($lineHeight * $lineNumber);
+}
+
+@mixin processBar($width: 100%, $percentage: 50%,
+$firstBackgroundColor: white, $secondBackgroundColor: skyblue,
+$textColor: black) {
+    display: block;
+    width: $width;
+    padding: 0;
+    background-color: $firstBackgroundColor;
+    &::after {
+        display: block;
+        width: $percentage;
+        padding: 8px 16px;
+        content: $percentage + '';
+        text-align: center;
+        background-color: $secondBackgroundColor;
+        color: $textColor;
+        
+    }
+}

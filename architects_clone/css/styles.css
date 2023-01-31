@@ -1,0 +1,327 @@
+/* @import "./reset.css"; */
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: Verdana,sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+body * {
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, .8);
+}
+
+h3 {
+    font-size: 24px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button, input {
+    font-size: 15px;
+}
+
+a:hover,
+button:hover {
+    cursor: pointer;
+}
+
+/** Navigation */
+.nav {
+    width: 100%;
+    height: 55px;
+    letter-spacing: 4px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 2px 5px #d5d5d5;
+    z-index: 9999;
+}
+
+.nav__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+}
+
+.nav__top a {
+    display: block;
+    padding: 8px 16px;
+    text-align: center;
+}
+
+.nav__top a:hover {
+    background-color: #d5d5d5
+}
+
+.nav__top__inner-links:last-child::after {
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
+}
+
+.nav__top__inner-links a {
+    display: block;
+    float: left;
+}
+
+/** Header */
+.header {
+    width: 1500px;
+    max-width: 100%;
+    margin: 55px auto 0;
+    position: relative;
+}
+
+.header > img {
+    width: 100%;
+    height: 100%;
+}
+
+.header__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header__title b {
+    padding: 8px 16px;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+/** Main Article */
+.main-contents {
+    width: 1516px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.main-contents section {
+    width: 100%;
+    padding: 0;
+}
+
+.section__title {
+    padding: 32px 8px;
+    overflow: hidden;
+}
+
+.section__title > h3 {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 16px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+/* Projects */
+.projects::after {
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
+}
+
+.projects__list {
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0px 8px;
+    position: relative;
+    float: left;
+}
+
+.projects__list img {
+    width: 100%;
+}
+
+.projects__list> span {
+    display: block;
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 8;
+}
+
+/* About */
+.about p {
+    margin: 15px 0;
+}
+
+.about__list {
+    width: 100%;
+}
+
+.about__list::after {
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
+}
+
+.about__list div:first-child {
+    margin-left :0;
+}
+
+.about__list__item {
+    width: 25%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+    float: left;
+}
+
+.about__list__item img {
+    width: 100%;
+}
+
+.about__list__item > p {
+    display: block;
+    margin: 15px 0;
+}
+
+.about__list__item > p:first-of-type {
+    color: gray;
+}
+
+.about__list__item > p > button {
+    width: 100%;
+    padding: 8px 16px;
+    background-color: #f1f1f1;
+    border: none;
+}
+
+.about__list__item > button:hover {
+    background-color: #d5d5d5
+}
+
+
+/* Contact */
+.contact {
+    padding: 64px 8px;
+}
+
+.contact > h3 {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 16px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.contact b {
+    font-size: 18px;
+    color: #607d8b
+}
+
+.contact__form,
+.contact__form p,
+.contact__form input {
+    display: block;
+    width: 100%;
+}
+
+.contact__form p {
+    margin: 15px 0;
+}
+
+.contact__form input {
+    padding: 8px 8px ;
+    border: 1px solid #cccccc;
+}
+
+.contact__submit {
+    margin: 16px 0;
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.contact__submit:hover {
+    cursor: pointer;
+}
+
+
+.map {
+    width: 100%;
+    padding: 0 8px;
+}
+
+.map img {
+    width: 100%;
+}
+
+/** Footer */
+.footer {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 32px 0;
+}
+
+.footer p {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.footer p a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+@media screen and (max-width: 1000px){
+    .main-contents {
+        width: 1000px;
+        max-width: 100%;
+    }
+
+    .projects__list,
+    .about__list__item {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .main-contents {
+        width: 600px;
+        max-width: 100%;
+    }
+   
+    .nav__top__inner-links {
+        display: none;
+    }
+
+    .projects__list,
+    .about__list__item {
+        width: 100%;
+    }
+}

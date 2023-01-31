@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+
+/* 모바일 퍼스트 */
+
+#wrap {width: 100%; /*height: 4384px;*/ background-color: rgba(0, 0, 0, .1); margin: auto;}
+
+#header {width: 360px; height: 120px; background-color: rgba(255, 0, 0, .1);
+    padding-top: 20px; box-sizing: border-box; text-align: center;}
+
+#lnb {width: 360px; height: 120px; background-color: rgba(0, 255, 0, .1);}
+#lnb ul li {width: 360px; height: 30px; background-color: rgba(0, 0, 0, .1);}
+#lnb ul li a {width: 100%; height: 100%; display: block; background-color: #000;
+    color: #fff; text-align: center; line-height: 30px; transition: .5s;}
+#lnb ul li a:hover {background-color: #00f;}
+
+#main_visual {width: 360px; height: 250px; background: url("../img/main_visual.jpg") no-repeat center /cover;
+    margin-bottom: 10px;}
+
+.main_img {width: 340px; /*height: 423px;*/ background-color: rgba(255, 255, 0, .1);
+    margin: 0 auto 20px; position: relative;}
+.main_img img {width: 100%; vertical-align: top;}
+/* block 속성을 가진 태그(figure)에 높이가 없을 때
+그 안에 inline 속성 요소가 들어가면 자식 요소만큼의 높이 외에 하단에 추가 간격이 생김.
+자식 요소의 vertical-align 속성이 기본값인 baseline으로 되어있어 생기는 문제.
+inline 속성 자식 요소의 vertical-align 속성을 top으로 바꿔주어 해결. */
+.main_img a {width: 100%; height: 100%; display: block; position: absolute;
+    left: 0; top: 0; opacity: 0; transition: .5s;}
+.main_img a:hover {opacity: 1;}
+.main_img_caption {width: 340px; height: 200px; background-color: rgba(0, 0, 0, .1);
+    position: absolute; bottom: 0; text-align: center; padding: 20px; box-sizing: border-box;
+    opacity: 0;}
+
+#mobile_btn {width: 240px; height: 60px; background-color: rgba(255, 0, 255, .1);
+    margin: 50px auto;}
+#mobile_btn ul li {width: 60px; height: 60px; background-color: rgba(0, 0, 0, .1);
+    float: left; margin-right: 30px;}
+#mobile_btn ul li:last-child {margin-right: 0;}
+#mobile_btn ul li a {width: 60px; height: 60px; display: block; background-color: #000;
+    color: #fff; border-radius: 50%; text-align: center; line-height: 60px; font-size: 20px;}
+#mobile_btn ul li a span {display: block;
+    text-indent: -99999px; /* 문단 들여쓰기 속성으로, block 속성 요소에 적용 가능 */
+    /* position: absolute; left: -9999px */}
+
+#footer {width: 360px; background-color: rgba(0, 255, 255, .1);
+    padding: 20px 10px; box-sizing: border-box;}
+#footer__logo {width: 340px; height: 60px;
+    background: url("../img/footer_logo.png") no-repeat center /contain;
+    margin-bottom: 10px;}
+#footer__logo span {display: block; text-indent: -99999px;}
+#copyright {width: 340px; background-color: rgba(0, 0, 0, .2); text-align: center;}
+#copyright span {margin: 0 10px;}
+#copyright span:first-of-type,
+#copyright span:nth-of-type(5),
+#copyright span:last-of-type {margin-left: 0;}

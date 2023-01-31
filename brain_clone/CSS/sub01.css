@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+:root {
+    --my_gray: #f4f4f4;
+    --my_red: #fa8468;
+    --my_green: #48c0a2;
+}
+
+* {margin: 0; padding: 0; border: 0;}
+body {font-family: 'Nanum Gothic', sans-serif;}
+a {text-decoration: none;}
+li {list-style: none;}
+
+/* 헤더 영역 */
+#header {width: 100%; height: 30px; background-color: rgba(86,77,76, 1);}
+#header_wrap {width: 1000px; height: 100%; margin: auto;}
+#gnb {width: 150px; height: 30px; padding-top: 6px;
+    float: right; box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif; font-size: 10px;}
+#gnb ul li {float: left;}
+#gnb ul li:first-child {border-right: 1px solid #000000; padding-right: 10px; margin-right: 10px;}
+#gnb ul li a {color: rgba(179,168,166, 1);}
+
+/* 네비게이션 영역 */
+#nav {width: 100%; height: 80px;
+    border-bottom: 1px solid #d9d9d9; box-sizing: border-box;}
+#nav_wrap {width: 1000px; height: 100%; margin: auto;}
+#top_logo {width: 141px; height: 60px; padding-top: 20px; float: left;}
+#lnb {width: 750px; height: 80px; float: right;}
+#lnb ul li {float: left; padding-top: 40px;
+    font-family: 'Nanum Gothic', sans-serif; font-size: 17px;  font-weight: bold; margin-right: 50px; letter-spacing: -2px;}
+#lnb ul li:first-child {margin-left: 5px;}
+#lnb ul li:last-child {margin-right: 0;}
+#lnb ul li a {color: rgba(85,85,85, 1);}
+
+/* 서브01 - 뇌교육이 궁금하세요 */
+#sub_cont {width: 100%; height: 1543px; position: relative; box-sizing: border-box;}
+.bg_img {width: 100%; height: 219px; position: absolute; background-image: url("../img/bgimg.png"); z-index: -1;}
+#sub_cont_wrap {width: 1000px; height: 100%; margin: auto;}
+
+/* snb */
+.snb {width: 220px; height: 1543px; float: left; box-sizing: border-box; border-left: 1px solid #f4f3f3; border-right: 1px solid #f4f3f3;}
+
+/* snb__title */
+.snb_title {width: 220px; height: 219px; background-color: var(--my_red);
+    padding: 65px 0 0 30px; box-sizing: border-box; color: white;}
+.snb_title h2 {font-family: "Noto Sans KR", sans-serif; font-size: 27px; font-weight: 500; letter-spacing: -2px; line-height: 1.1; margin-bottom: 10px;}
+.snb_title p {font-family: "Nanum Gothic", sans-serif; font-size: 12px; color: #ffd3c8;}
+
+/* snb__list */
+.snb ul li {width: 220px; height: 55px; border: 1px solid var(--my_gray);
+    box-sizing: border-box; line-height: 55px;}
+.snb ul li a {width: 100%; height: 100%; display: block;
+    padding-left: 28px; box-sizing: border-box; position: relative;
+    font-size: 15px; color: #555;
+}
+.snb ul li a:hover {background-color: var(--my_gray); color: #333;}
+.snb ul li a:hover::after {content: ">"; color: my_red; position: absolute; right: 20px;}
+
+/* sub_cont_right__title */
+.sub_cont_right {width: 740px; height: 100%; float: right;}
+#sub_cont_right_title {width: 100%; height: 219px; padding-top: 27px; box-sizing: border-box;
+    background: url("../img/top_img.png") no-repeat right 41px bottom;}
+.path {font-size: 12px; color: #ccc;}
+.path span {color: #888; margin: 0 8px;}
+.path span:first-child{margin-left: 0;}
+.path span:last-child {font-weight: bold;}
+#sub_cont_right_title h2 {font-size: 40px; font-weight: 300; color: var(--my_red);
+    letter-spacing: -2px; margin: 45px 0 11px;}
+#sub_cont_right_title p {font-size: 11px; color: #888; line-height: 1.6;}
+
+/* sub_cont_right__aboutbr */
+#aboutbr {width: 100%; height: 389px; padding-top: 38px; box-sizing: border-box; background: url("../img/aboutbr_bg.jpg") no-repeat right bottom;);}
+#aboutbr::before {content: ""; display: block; width: 27px; height: 4px; background-color: var(--my_green); margin: 0 0 10px 2px;}
+#aboutbr h3 {font-size: 37px; color: var(--my_green); letter-spacing: -2px;}
+#aboutbr h4 {font-size: 22px; color: #868686; margin: 22px 0; line-height: 1.3; letter-spacing: -1px;}
+#aboutbr p {font-size: 13px; color: #868686; line-height: 1.5;}
+.sub_tab {width: 100%; height: 40px; background-color: rgba(0, 255, 0, .2);}
+.sub_tab ul li {float: left; width: 244px;}
+
+.sub_tab_content {width: 100%; height: 711px; background-color: rgba(0, 0, 0, .1);}
+.sub_tab_content > * {float: left;}
+#video_title {width: 289px; height: 254px; background-color: rgba(0, 0, 0, .4);}
+#video_youtube {width: 449px; height: 254px; background-color: rgba(0, 0, 0, .2);}
+#brain_training_title {width: 738px; height: 134px; background-color: rgba(0, 0, 0, .3);}
+#brain_training_img {width: 339px; height: 279px; background-color:rgba(0, 0, 0, .4)}
+#brain_training_cont {width: 350px; height: 279px; background-color: rgba(0, 0, 0, .5);}
+.sub_cont_btn_bg {width: 100%; height: 40px; background-color: rgba(255, 0, 0, .2);}
+.next_sub_btn {width: 184px; height: 40px; margin: auto; background-color: rgba(0, 0, 0, .7);}
+
+
+/* 퀵메뉴 */
+#quick {width: 116px; height: 584px; position: fixed; left: 50%; top: 150px; margin-left: 523px;}
+
+/* 하단 영역 */
+#footer {width: 100%; height: 116px; border-top: 1px solid #d9d9d9;}
+#footer_wrap {width: 1000px; height: 100%; margin: auto; padding-top: 30px; box-sizing: border-box;}
+#footer_logo {width: 200px; height: 116px; float: left; text-align: right;}
+#copyright {width: 750px; height: 116px; float: right;}
+#fnb {font-size: 12px;}
+#fnb::after {content: ""; display: block; clear: both;}
+#fnb ul li {float: left; padding-right: 8px; border-right: 1px solid #d9d9d9; margin-right: 8px;}
+#fnb ul li:last-child {margin: 0; padding: 0; border: none;}
+#fnb ul li a {color: #555;}
+#fnb ul li:nth-child(3),
+#fnb ul li:nth-child(4) {font-weight: bold;}
+#company_info {margin: 11px 0px 16px; line-height: 1.5; font-size: 12px; color: #555;}
+#company_info > span {margin-right: 16px;}
+#copy {font-size: 11px; color: #888;}
+#copy > span {font-weight: 600; color: #888}

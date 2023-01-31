@@ -1,0 +1,44 @@
+/* Common Colors */
+$powederPink: #f2e1e1;
+$softPink: #ffdddd;
+$softRed: #f88078;
+$white: #fff;
+$black: #000;
+$gray: #ccc;
+$darkGray: #757575;
+$green: #4CAF50;
+$red: #f44336;
+
+$cmu: 15px; // Common margin unit;
+$cpu: 8px; // Common padding unit
+
+/** 
+ * Default for Desktop,
+ * vaiable for tablet: <vname>-t,
+ * for mobile: <vname>-m
+*/
+/* Header tag style */
+// Header font size
+$h1: 64px;
+$h2: 36px;
+$h3: 30px;
+$h1-t: 58px;
+$h2-t: 30px;
+$h3-t: 24px;
+$h1-m: 50px;
+$h2-m: 24px;
+$h3-m: 18px;
+
+// Header margin
+$hm: 10px;
+$hm-m: 8px;
+
+/* Paragraph kind tag style */
+// Font size
+$fs: 15px;
+$lfs: 18px; // Large font size
+$gfs: 24px; // Giant font size
+$fs-t: 14px;
+$lfs-t: 17px;
+$fs-m: 13px;
+$lfs-m: 16px;

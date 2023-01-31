@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+/* initialization */
+* {margin: 0; padding: 0; border: 0;}
+body {font-family: 'Noto Sans KR', sans-serif;}
+ul {list-style: none;}
+a {text-decoration: none;}
+
+/* all center content box */
+.center_wrap {width: 100%; padding: 0 15px; box-sizing: border-box;}
+.center_wrap h2 {margin-bottom: 24px; font-size: 26px; font-weight: normal;}
+.center_wrap h2 span {font-weight: 900;}
+
+/* slide buttons(previous, next) */
+.slide_btn {
+    width: 30px; height: 30px;
+    position: absolute; top: 50%; margin-top: -60px;
+    /* figcaption을 포함한 높이이기 때문에, 해당 높이만큼 margin으로 땡겨줌 */
+    font-size: 30px;
+}
+.slide_btn a {color: #000;}
+.slide_btn span {display: block; text-indent: -9999px;}
+.slide_left_btn {left: 0;}
+.slide_right_btn {right: 0;}
+
+#toms_menu_slide,
+#mdpick {position: relative;}
+
+/* header */
+#header {
+    width: 100%; height: 126px; background-color: #fff;
+    position: fixed; left: 0; top: 0; z-index: 9999;
+}
+#header .center_wrap {
+    height: 60px;
+    /* padding-top: 7px; box-sizing: border-box; position: relative; */
+    display: flex; justify-content: space-between; align-items: center;
+}
+
+/* top logo */
+#top_logo {width: 47px; height: 47px; /*margin: auto;*/ order: 1;}
+#top_logo img {width: 100%;}
+
+/* mobile menu */
+#m_menu_btn {width: 30px; height: 30px;
+    /*position: absolute; left: 15px; top: 15px;*/ text-align: center;}
+#m_basket_btn {
+    width: 30px; height: 30px;
+    /*position: absolute; right: 15px; top: 15px;*/
+    text-align: center; order: 2;
+}
+#m_menu_btn a,
+#m_basket_btn a {color: #000; font-size: 20px;}
+#m_menu_btn span,
+#m_basket_btn span {display: block; text-indent: -9999px;}
+#m_smile_btn {width: 100%; position: absolute; left: 0; top: 60px;}
+#m_smile_btn img {width: 100%;}
+
+#d_smile_btn,
+#right_menu {display: none;}
+
+/* main banner, visual area */
+/* background image size: 750 * 1144 */
+#main_visual {
+    width: 100%; height: 0;
+    background: url("../img/visual_img_m.jpg") no-repeat center /contain;
+    margin-top: calc(140/750*100% + 60px); padding-bottom: calc(1144/750*100%);
+    /* 반응형 백그라운드 이미지를 위해 브라우저 너비에 맞게 이미지 사이즈를 조정할 수 있도록 width를 100%로 지정
+    만일 원래 이미지 사이즈보다 커지지 않도록(깨짐 방지) 하고 싶다면 img 태그에 max-width: 본너비 or max-width; 100% 적용. */
+    /* height는 0으로 작성하되 padding-bottom/top을 이용해 이미지가 들어갈 백그라운드 크기를 비율로 계산해 넣어준다.
+    이 때 calc()를 이용, 자동으로 수식을 계산해주는 CSS3 속성.
+    padding-top/bottom: 백그라운드 이미지 세로너비/가로너비 * 100%; */
+}
+#main_visual p {text-indent: -9999px;}
+
+/* notice */
+#notice {width: 100%; height: 60px; background-color: #572a31;}
+#notice_box {
+    width: 100%; height: 100%;
+    background: url("../img/notice_icon.png") no-repeat left 14px;
+    padding-left: 50px; box-sizing: border-box;
+    font-size: 14px; overflow: hidden;
+}
+#notice_box ul li {line-height: 60px;}
+#notice_box ul li:nth-child(2) {display: none;}
+.notice_recent {display: flex; color: #fff}
+.notice_recent_title {
+    margin-right: 10px;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.notice_recent_date {width: 72px; /* float: left; */ margin-right: 10px;}
+.notice_recent_more {width: 17px; /* float: left; */}
+.notice_recent_more img {vertical-align: sub;}
+
+/* tom n toms menu */
+#toms_menu {width: 100%; /* height: 630px; */
+    text-align: center; padding: 70px 0 80px; box-sizing: border-box;}
+#toms_menu ul li {width: 100%;}
+.toms_menu_slide_img img {width: 100%; margin-bottom: 38px;}
+.toms_menu_slide_caption {font-size: 18px;}
+#toms_menu ul li:nth-child(2),
+#toms_menu ul li:nth-child(3) {display: none;}
+
+/* about tom n toms */
+#toms_about {
+    width: 100%; /* height: 620px; */
+    background: url("../img/toms_about_bg_m.jpg") no-repeat bottom /cover;
+    padding-top: 70px; box-sizing: border-box;
+    text-align: center; color: #572a31;
+}
+#toms_about .center_wrap {min-height: 600px;}
+h2.toms_about_title {font-size: 18px;}
+h2.toms_about_title span {font-size: 26px;}
+.toms_about_cont {font-size: 14px; line-height: 1.8; margin-bottom: 50px;}
+#toms_about_btn {width: 300px; margin: auto;}
+#toms_about_btn ul {display: flex; flex-wrap: wrap;}
+#toms_about_btn ul li {width: 145px; height: 45px; background-color: rgba(0, 0, 0, .1);}
+#toms_about_btn ul li:first-child {width: 300px; margin-bottom: 10px;}
+#toms_about_btn ul li:nth-child(2) {margin-right: 10px;}
+#toms_about_btn ul li a {
+    width: 100%; height: 100%;
+    display: block; box-sizing: border-box;
+    background-color: #ece0db; border: 1px solid #572a31;
+    text-align: center; line-height: 45px;
+    font-size: 18px; font-weight: 700; color: #572a31;
+}
+#toms_about_btn ul li a#branch_btn {background-color: #572a31; color: #fff;}
+
+/* tom n toms md zone */
+#toms_md {width: 100%; /* height: 600px; */
+    text-align: center; padding: 70px 0 40px; box-sizing: border-box;}
+#toms_md ul li {width: 100%;}
+.mdp_slide_img img {width: 100%; margin-bottom: 38px;}
+.mdp_slide_caption {font-size: 18px;}
+#toms_md ul li:nth-child(2),
+#toms_md ul li:nth-child(3) {display: none;}
+
+/* sns area */
+#toms_sns {width: 100%; /* height: 610px; */
+    text-align: center; padding: 35px 0 80px; box-sizing: border-box;}
+/* #toms_sns .center_wrap {overflow: hidden;} */
+#toms_sns ul {display: flex; flex-wrap: wrap;}
+#toms_sns ul li {
+    width: calc(100%/3); /* height: 100px */
+    padding-bottom: calc(100%/3);
+    /* width가 %단위로 가변적일 때, 너비에 맞춰 높이도 동일 비율로 변경을 원할 겅여ㅜ
+    heigth 대신 padding-bottom 속성에 %값을 준다.(width와 동일 수치 = 정사각형) */
+    /* float: left; */
+    position: relative;
+}
+#toms_sns ul li img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    /* object-fit: background-size와 비슷하게
+    img 또는 video 태그를 block 속성 태그에 넣었을 때,
+    비율이 안맞는 경우 채우는 방식을 변경해주는 속성(CSS3, IE 적용 X). */
+    position: absolute; left: 0; top: 0;
+    /* img 태그와 li의 패딩 값이 겹칠 수 있도록 position을 absolute로 설정(부모 요소에 relative). */
+}
+
+/* floating chat bot block */
+#chatbot {width: 80px; height: 80px; position: fixed; right: 10px; bottom: 105px;}
+#chatbot img {width: 100%;}
+#gotop {width: 45px; height: 45px; position: fixed; right: 10px; bottom: 50px;}
+#gotop a {
+    width: 45px; height: 45px; display: block;
+    background-color: rgba(0, 0, 0, .8); color: #fff;
+    text-align: center; line-height: 45px; font-size: 20px;
+}
+
+/* floating go to top btn */
+#gotop a:hover {background-color: #000;}
+#gotop a span {display: block; text-indent: -9999px;}
+
+/* footer */
+#footer {width: 100%; /* height: 580px; */ background-color: #efefef;
+    padding: 50px 0; box-sizing: border-box;}
+#footer h3 {font-size: 14px; font-weight: normal;}
+
+/* follow tom n toms */
+#follow {margin-bottom: 30px; display: flex; align-items: center;}
+#follow h3 {/*float: left;*/ margin-right: 10px; /*line-height: 30px;*/}
+#follow ul {display: flex;}
+#follow ul li {width: 30px; height: 30px; /* float: left; */ margin-right: 7px;}
+#follow ul li img {width: 30px; height: 30px;}
+#follow::after {content: ""; display: block; clear: both;}
+
+/* language setting */
+#language {margin-bottom: 30px;}
+#language ul li {display: inline-block; margin-right: 5px;}
+#language ul li a {color: #000; letter-spacing: -1px; font-weight: 700;}
+
+/* customer information */
+#customer {margin-bottom: 30px;}
+#customer a {color: #572a31; font-size: 26px; font-weight: 300; letter-spacing: -1px;}
+
+/* fnb */
+#fnb {margin-bottom: 40px;}
+#fnb ul li {font-size: 14px; float: left; line-height: 1.8;}
+#fnb ul li:nth-child(4),
+#fnb ul li:nth-child(7) {clear: both;}
+/* 4, 7번째 요소에서 줄 바꿈 해주려고 clear: both; */
+#fnb ul li:nth-child(3)::after,
+#fnb ul li:nth-child(6)::after,
+#fnb ul li:last-child::after {content: "";}
+#fnb ul li::after {content: "·"; margin: 0 5px;}
+#fnb ul li a {color: #572a31;}
+#fnb::after {content: ""; display: block; clear: both;}
+
+/* company information */
+#company {margin-bottom: 20px; font-size: 12px;
+    font-style: normal; line-height: 1.6; color: #8a8a8a;}
+/* address 태그(시맨틱 태그)는 기본 이탤릭체. 초기화하려면 font-style: normal; */
+#company span {margin-right: 10px;}
+
+/* copyright */
+#copyright {font-size: 12px; color: #8a8a8a;}
+
+/* tablet styles */
+@media screen and (min-width: 768px) {
+    #main_visual {
+        background-image: url("../img/visual_img.jpg");
+        padding-bottom: calc(835/2000*100%);
+    }
+
+    .notice_recent {justify-content: space-between;}
+    .notice_recent_title {margin-right: auto;}
+
+    #toms_menu ul,
+    #toms_md ul {display: flex;}
+    #toms_menu ul li:nth-child(2),
+    #toms_menu ul li:nth-child(3),
+    #toms_md ul li:nth-child(2),
+    #toms_md ul li:nth-child(3) {display: block;}
+
+    #toms_about {
+        background-image: url("../img/toms_about_bg.jpg");
+        padding-bottom: 70px;
+        /* position: relative; */
+        display: flex; justify-content: flex-end;
+        text-align: left;
+    }
+    #toms_about .center_wrap {
+        width: 60%; min-height: auto;
+        /* position: absolute; left: 50%; */
+    }
+    h2.toms_about_title {font-size: 5vw; letter-spacing: -3px;}
+    h2.toms_about_title span {font-size: 6vw;}
+    .toms_about_cont {font-size: 2vw;}
+    #toms_about_btn {width: 100%;}
+    #toms_about_btn ul li {
+        width: auto; margin-right: 10px;
+        flex: 1 0;
+        /* flex-grow: 아이템들의 flex-basis를 제외한 여백 부분을
+        flex-grow에 지정된 숫자의 비율로 자동으로 나눠 가지게 함.
+        -> 아이템 크기 비율을 설정하는 속성
+        flex-basis: 0/0이외 숫자
+        0 이외의 숫자를 입력 시 해당 아이템이 본래 사이즈보다 커지며, 빈 공간을 매워줌 */
+    }
+    #toms_about_btn ul li:first-child {width: auto;}
+    #toms_about_btn ul li:last-child {margin-right: 0;}
+
+    #toms_sns ul li {width: 20%; padding-bottom: 20%;}
+
+    #fnb ul li:nth-child(4),
+    #fnb ul li:nth-child(7) {clear: none;}
+    #fnb ul li:nth-child(6) {clear: both;}
+    #fnb ul li:nth-child(3)::after,
+    #fnb ul li:nth-child(6)::after {content: "·";}
+    #fnb ul li:nth-child(5)::after {content: "";}
+}
+
+/* desktop styles */
+@media screen and (min-width: 1400px){
+    .center_wrap {width: 1400px; margin: auto; padding: 0;}
+
+    #header {height: auto;}
+    #header .center_wrap {height: 140px;}
+
+    #top_logo {width: 80px; height: auto; order: 0;}
+    #d_smile_btn {width: 80px; margin-right: auto;}
+
+    #m_menu_btn,
+    #m_basket_btn,
+    #m_smile_btn {display: none;}
+    #d_smile_btn,
+    #right_menu {display: block;}
+
+    #d_gnb {font-size: 14px; text-transform: uppercase; margin-bottom: 20px;}
+    #d_lnb {font-size: 20px;}
+    #d_gnb,
+    #d_lnb {font-weight: 300;;}
+    
+    #d_gnb ul,
+    #d_lnb ul {display: flex; justify-content: flex-end;}
+    /* #d_gnb ul li {border-right: 1px solid #ccc;
+        padding-right: 10px; margin-right: 10px;}
+    #d_gnb ul li:last-child {margin: 0; padding: 0; border: 0;} */
+    #d_gnb ul li::after {content: "|"; margin: 0 10px; color: #ccc;}
+    #d_gnb ul li:last-child::after {content: ""; margin: 0;}
+    #d_gnb ul li a {color: #666;}
+
+    #d_lnb ul li {margin-left: 40px;}
+    #d_lnb ul li a {color: #222;}
+
+    #main_visual {margin-top: 140px;}
+
+    #notice_box ul {display: flex;}
+    #notice_box ul li {width: 660px;}
+    #notice_box ul li:nth-child(2) {display: block; margin-left: 30px;}
+
+    #toms_about .center_wrap {width: 1400px; padding-left: 700px; box-sizing: border-box;}
+    h2.toms_about_title,
+    .toms_about_cont,
+    #toms_about_btn {width: 700px;}
+    .tonms_about_cont {font-size: 24px;}
+    h2.toms_about_title {font-size: 40px;}
+    h2.toms_about_title span {font-size: 60px;}
+    #toms_about_btn {margin: 0;}
+    #toms_about_btn ul li {height: 60px; line-height: 60px;}
+    #toms_about_btn ul li a {font-size: 24px; line-height: 60px;}
+
+    #footer .center_wrap {display: flex;}
+    #language {display: none;}
+    #follow {order: 1; align-items: flex-start;}
+    #footer_center {margin-right: auto;}
+    #customer {width: 400px;}
+}

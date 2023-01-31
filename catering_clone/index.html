@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet au Catering</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- 최상단 네비게이션 메뉴 -->
+    <nav class="nav">
+        <div class="nav__top">
+            <a data-target=".header">Gourmet au Catering</a>
+            <div class="nav__top__inner-links">
+                <a data-target=".about-catering">About</a>
+                <a data-target=".our-menu">Menu</a>
+                <a data-target=".contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <img src="./img/hamburger.jpg" alt="Le Catering">
+        <div class="header__title">
+            <h1>Le Catering</h1>
+        </div>
+    </header>
+
+    <!-- 전체 글 article -->
+    <article class="main-contents">
+        <!-- About Catering -->
+        <section class="about-catering">
+            <div class="section__half-box">
+                <img src="./img/tablesetting2.jpg" alt="tablesetting-2">
+            </div>
+
+            <div class="section__half-box">
+                <h1>About Catering</h1>
+                <br>
+                <h5>Tradition since 1889</h5>
+                <p>
+                    The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use  
+                    <span>
+                        seasonal
+                    </span>
+                    ingredients.
+                </p>
+                <p>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </div>
+        </section>
+        <hr>
+
+        <!-- Our Menu -->
+        <section class="our-menu">
+            <div class="section__half-box">
+                <h1>Our Menu</h1>
+                <br>
+                <h4>Bread Basket</h4>
+                <p>Assortment of fresh baked fruit breads and muffins 5.50</p>
+                <br>
+                <h4>Honey Almond Granola with Fruits</h4>
+                <p>Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p>
+                <br>
+                <h4>Belgian Waffle</h4>
+                <p>Vanilla flavored batter with malted flour 7.50</p>
+                <br>
+                <h4>Scrambled eggs</h4>
+                <p>Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+                <br>
+                <h4>Blueberry Pancakes</h4>
+                <p>With syrup, butter and lots of berries 8.50</p>
+            </div>
+            <div class="section__half-box">
+                <img src="./img/tablesetting.jpg" alt="tablesetting">
+            </div>
+        </section>
+        <hr>
+
+        <!-- Contact -->
+        <section class="contact">
+            <h1>Contact</h1>
+            <br>
+            <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
+            <p>
+                <b>Catering Service, 42nd Living St, 43043 New York, NY</b>
+            </p>
+            <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
+            <form action="#" id="contact__form" class="contact__form">
+                <p><input type="text" placeholder="Name" required></p> 
+                <p><input type="text" placeholder="How many people" required></p>
+                <p><input type="datetime-local" required></p>
+                <p><input type="text" placeholder="Message/Special requirements" required></p>
+                <p><button type="submit" id="contact__submit" class="contact__submit">SEND MESSAGE</button></p>
+            </form>
+        </section>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp">w3.css</a></p>
+    </footer>
+
+    <!-- 네비게이션 내부 링크 처리 -->
+    <script type="module">
+        import Link from "./js/InnerLinks.js";
+
+        document.querySelectorAll('a[data-target]')
+        .forEach(v => {
+            v.addEventListener('click', e => {
+                Link(e.currentTarget);
+                e.currentTarget.blur();
+            })
+        })
+    </script>
+
+    <!-- datetime-local <input> 태그의 시작 value 초기화 -->
+    <script type="module">
+        import timeSetter from "./js/TimeSetter.js";
+        timeSetter();
+    </script>
+
+    <!-- form submit button 페이지 막기 // action="#"으로 처리해둠 -->
+    <script type-="module">
+        // document.querySelector('#contact__submit').addEventListener('click', e => {
+        //     e.preventDefault();
+        // });
+    </script>
+
+    <script type="module">
+        import exploreDom from './js/Dom.js';
+
+        const body = document.querySelector('body');
+        const i = exploreDom(body);
+        console.log(i);
+    </script>
+
+    <!--— 공지사항 알림 —-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.min.js"></script>
+    <script src="./js/notice.js"></script>
+    <script>
+        // Notice.init('본인이름', 'pdf파일경로');
+        Notice.init('서보선', '22.09.20-서보선.pdf');
+    </script>
+</body>
+</html>

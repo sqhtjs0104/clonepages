@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.min.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/cb9a8df948.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Side menu -->
+    <div class="side-menu">
+        <div class="side-menu__content">    
+            <div class="side-menu__content__top">
+                <div class="side-menu__content__top__avatar">
+                    <img src="./assets/img/avatar_g2.jpg" alt="My photo">
+                    <div class="shadow-box"><i class="fa-solid fa-camera"></i></div>
+                </div>
+                <button id="side-menu__quit"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <br>
+            <h4><b>PORTFOLIO</b></h4>
+            <p>Template by W3.CSS</p>
+        </div>
+        <a href="#portfolio"><i class="fa-solid fa-grip"></i>PORTFOLIO</a>
+        <a href="#about-me"><i class="fa-solid fa-user"></i>ABOUT</a>
+        <a href="#contact"><i class="fa-solid fa-envelope"></i>CONTACT</a>
+        <div class="side-menu__panel">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-pinterest"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+        </div>
+    </div>
+
+    <!-- Shadow box when side menu opened -->
+    <div class="shadow-box"></div>
+
+    <!-- Wrapper for main contents -->
+    <div class="main__contents">
+        <!-- Top Header, Menu -->
+        <header class="header">
+            <div class="header__top">
+                <span id="side-menu__open" class="side-menu__open"><i class="fa-solid fa-bars"></i></span>
+                <a href="">
+                    <img src="./assets/img/avatar_g2.jpg" alt="My Avatar">
+                    <div class="shadow-box"><i class="fa-solid fa-user"></i></div>
+                </a>
+            </div>
+            <div class="header__contents">
+                <h1><b>My Portfolio</b></h1>
+                <div class="header__contents__filter" id="portfolio">
+                    <span>Filter:</span>
+                    <ul>
+                        <li><button>ALL</button></li>
+                        <li><button><i class="fa-regular fa-gem"></i>Design</button></li>
+                        <li><button><i class="fa-regular fa-image"></i>Photos</button></li>
+                        <li><button><i class="fa-solid fa-map-pin"></i>Art</button></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Contents -->
+        <article>
+            <!-- Portfolios -->
+            <section class="portfolios">
+                <div class="portfolios__item">
+                    <div class="portfolios__item__img">
+                    <img src="./assets/img/mountains.jpg"   alt="Mountains">                    
+                    </div>
+                    <div class="portfolios__item__content">
+                        <p><b>Lorem Ipsum</b></p>
+                        <p>
+                            Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolios__item">
+                    <div class="portfolios__item__img">
+                        <img src="./assets/img/lights.jpg" alt="Lights">                    
+                    </div>
+                    <div class="portfolios__item__content">
+                        <p><b>Lorem Ipsum</b></p>
+                        <p>
+                            Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolios__item">
+                    <div class="portfolios__item__img">
+                        <img src="./assets/img/nature.jpg" alt="Nature">                    
+                    </div>
+                    <div class="portfolios__item__content">
+                        <p><b>Lorem Ipsum</b></p>
+                        <p>
+                            Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolios__item">
+                    <div class="portfolios__item__img">
+                    <img src="./assets/img/p1.jpg" alt="Clouded     Mountains">                    
+                    </div>
+                    <div class="portfolios__item__content">
+                        <p><b>Lorem Ipsum</b></p>
+                        <p>
+                            Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolios__item">
+                    <div class="portfolios__item__img">
+                        <img src="./assets/img/p2.jpg" alt="Coffee beans">
+                    </div>
+                    <div class="portfolios__item__content">
+                        <p><b>Lorem Ipsum</b></p>
+                        <p>
+                            Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                            Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                        </p>
+                    </div>
+                </div>
+                <div class="portfolios__item">
+                    <div class="portfolios__item__img">
+                        <img src="./assets/img/p3.jpg" alt="Bear">                    
+                    </div>
+                    <div class="portfolios__item__content">
+                        <p><b>Lorem Ipsum</b></p>
+                        <p>
+                            Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portfolios - Control Bar -->
+            <div class="portfolios__control-bar">
+                <button><i class="fa-solid fa-angles-left"></i></button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button><i class="fa-solid fa-angles-right"></i></button>
+            </div>
+
+            <!-- About me - Upper Photos -->
+            <div class="about-me__photos">
+                <img src="./assets/img/avatar_g.jpg" alt="My photo">
+                <img src="./assets/img/me2.jpg" alt="My photo 2">
+            </div>
+
+            <!-- About me - Photos modal screen -->
+            <div class="modal">
+                <div class="modal__top">
+                    <p>modal</p>
+                    <button id="modal__close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="modal__body"><img src="" alt=""></div>
+            </div>
+
+            <!-- About Me -->
+            <section class="about-me" id="about-me">
+                <h4><b>About Me</b></h4>
+                <p>
+                    Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                </p>
+
+                <h4>Technical Skills</h4>
+                <p>Photography</p>
+                <div class="procress-bar p95"></div>
+                <p>Web Design</p>
+                <div class="procress-bar p85"></div>
+                <p>Photoshop</p>
+                <div class="procress-bar p80"></div>
+                <button><i class="fa-solid fa-download"></i>Download Resume</button>
+
+                <br>
+
+                <h4>How much I charge</h4>
+                <div class="about-me__charge">
+                    <div class="about-me__charge__item">
+                        <ul>
+                            <li><h2>Basic</h2></li>
+                            <li>Web Design</li>
+                            <li>Photography</li>
+                            <li>1GB Storage</li>
+                            <li>Mail Support</li>
+                            <li><h2>$10</h2><span>per month</span></li>
+                            <li><button>Sign Up</button></li>
+                        </ul>
+                    </div>
+                    <div class="about-me__charge__item">
+                        <ul>
+                            <li><h2>Pro</h2></li>
+                            <li>Web Design</li>
+                            <li>Photography</li>
+                            <li>50GB Storage</li>
+                            <li>Endless Support</li>
+                            <li><h2>$25</h2><span>per month</span></li>
+                            <li><button>Sign Up</button></li>
+                        </ul>
+                    </div>
+                    <div class="about-me__charge__item">
+                        <ul>
+                            <li><h2>Premium</h2></li>
+                            <li>Web Design</li>
+                            <li>Photography</li>
+                            <li>50GB Storage</li>
+                            <li>Unlimited Support</li>
+                            <li><h2>$25</h2><span>per month</span></li>
+                            <li><button>Sign Up</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section class="contact" id="contact">
+                <h4><b>Contact Me</b></h4>
+
+                <div class="contact__ways">
+                    <div class="contact__ways__item">
+                        <p><i class="fa-solid fa-envelope"></i></p>
+                        <p>email@email.com</p>
+                    </div>
+                    <div class="contact__ways__item">
+                        <p><i class="fa-sharp fa-solid fa-location-dot"></i></p>
+                        <p>Chicago, US</p>
+                    </div>
+                    <div class="contact__ways__item">
+                        <p><i class="fa-solid fa-phone"></i></p>
+                        <p>512312311</p>
+                    </div>
+                </div>
+
+                <hr>
+                
+                <form action="" id="contact-form" class="contact__form">
+                    <label for="#contact-form__name">Name</label>
+                    <input type="text" id="#contact-form__name">
+                    <label for="#contact-form__name">Email</label>
+                    <input type="text" id="#contact-form__email">
+                    <label for="#contact-form__name">Message</label>
+                    <input type="text" id="#contact-form__Message">
+                    <p>
+                        <button type="submit" id="form__submit"><i class="fa-solid fa-paper-plane"></i>Send Message</button>
+                    </p>
+                </form>
+            </section>
+        </article>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__container">
+                <h3>FOOTER</h3>
+                <p>
+                    Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.
+                </p>
+                <p>Powered by <a href="https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm#">w3.css</a></p>
+            </div>
+            <div class="footer__container">
+                <h3>BLOG POSTS</h3>
+                <ul>
+                    <li>
+                        <img src="./assets/img/workshop.jpg" alt="workshop">
+                        <div>
+                            <span>Lorem</span>
+                            <br>
+                            <span>Sed mattis nunc</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="./assets/img/gondol.jpg" alt="workshop">
+                        <div>
+                            <span>Ipsum</span>
+                            <br>
+                            <span>Praes tinci sed</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__container">
+                <h3>POPULAR TAGS</h3>
+                <p class="footer__container__tags">
+                    <span>Travel</span>
+                    <span>New York</span>
+                    <span>Dinner</span>
+                    <span>Salmon</span>
+                    <span>France</span>
+                    <span>Drinks</span>
+                    <span>Ieads</span>
+                    <span>Flavors</span>
+                    <span>Cuisine</span>
+                    <span>Chicken</span>
+                    <span>Dressing</span>
+                    <span>Fried</span>
+                    <span>Fish</span>
+                    <span>Duck</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- preventDefault -->
+    <script type="module">
+        document.querySelector('#form__submit').addEventListener('click', e => {
+            e.preventDefault();
+        });
+    </script>
+
+    <!-- Side menu control -->
+    <script type="module">
+        const sideMenu = document.querySelector('.side-menu');
+        const shadowBox = document.querySelector('body > .shadow-box');
+
+        document.querySelector('#side-menu__open').addEventListener('click', e => {
+            sideMenu.style.display = 'flex';
+            shadowBox.style.display = 'block';
+        });
+
+        document.querySelector('#side-menu__quit').addEventListener('click', e => {
+            sideMenu.style.display = 'none';
+            shadowBox.style.display = 'none';
+        });
+
+        window.onresize = e => {
+            if (document.documentElement.clientWidth >= 1024) {
+                sideMenu.style.display = 'flex';
+                shadowBox.style.display = 'none';
+            } else {
+                if (shadowBox.style.display == 'block') {
+                    sideMenu.style.display = 'flex';
+                    shadowBox.style.display = 'block';
+                } else {
+                    sideMenu.style.display = 'none';
+                    shadowBox.style.display = 'none';
+                }
+            }
+        };
+    </script>
+
+    <!-- Modal window control -->
+    <script type="module">
+        document.querySelectorAll('.about-me__photos img').forEach(v => {
+            v.addEventListener('click', e => {
+                document.querySelector('.modal__body img').setAttribute('src', e.currentTarget.getAttribute('src'));
+                document.querySelector('.modal__top p').innerHTML = e.currentTarget.getAttribute('alt');
+                document.querySelector('.modal').style.display = "block";
+                document.querySelector('body').style.overflow = "hidden";
+            });
+        });
+
+        document.querySelector('#modal__close').addEventListener('click', e => {
+            document.querySelector('.modal').style.display = "none";
+            document.querySelector('body').style.overflow = "auto";
+        });
+    </script>
+
+    <!-- Dom tree -->
+    <script type="module">
+        import dom from './assets/helper/Dom.js';
+        console.log(dom(document.querySelector('body')));
+    </script>
+
+    <!--— 공지사항 알림 —-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.min.js"></script>
+    <script src="./assets/js/notice.js"></script>
+    <script>
+        // Notice.init('본인이름', 'pdf파일경로');
+        Notice.init('서보선', '22.09.27-서보선.pdf');
+    </script>
+</body>
+</html>
